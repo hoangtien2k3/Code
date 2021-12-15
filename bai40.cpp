@@ -1,6 +1,6 @@
 //
 // Created by Hoàng Anh Tiến on 15/12/2021.
-//
+// Tiến Code ngu vcc
 
 #include <iostream>
 #include <math.h>
