@@ -1,32 +1,27 @@
 //
 // Created by Hoàng Anh Tiến on 15/12/2021.
 //
+// Bài 41 : Tính S(n) = 1 / (1 + 1 / (1 + 1 / (….1 + 1 / 1 + 1))) có n dấu phân số
 
-#include "iostream"
-#include "math.h"
-#include "iomanip"
+#include <stdio.h>
+#include <conio.h>
 
-using namespace std;
+int main()
+{
+    int i, n;
+    float S;
+    i = 0;
+    S = 1;
 
-float Sum(int n) {
-    float S = 1;
-    for (int i=1; i<=n; i++) {
-        S = (1 + 1.0)/ S;
+    printf("\nNhap n = ");
+    scanf("%d", &n);
+
+    while (i <= n)
+    {
+        S = 1 + 1.0 / S;
+        i++;
     }
-    return S;
-}
-
-int main() {
-    int n;
-    do {
-        cout << "nhap vao n(dau can) : n = ";
-        cin >> n;
-        if (n < 1)  {
-            cout << endl << "nhap lai gia tri n = ";
-        }
-    } while (n < 1);
-
-    float S = Sum(n);
-    cout << fixed << setprecision(6) << "Tong = " << S << endl;
+    printf("\nTong la %.4f", S);
+    getch();
     return 0;
 }
