@@ -28,8 +28,7 @@ int main()
     while ( S + i < n)
     {
         i++;       
-        // S = S + i; // tương đương 1 dòng S += ++i;
-        S += i;
+        S = S + i; // tương đương 1 dòng S += ++i; // S += i;
     }
     printf("\nGia tri k lon nhat de S(k) = 1 + 2 + ... + k < n la %d", i);
     getch();
