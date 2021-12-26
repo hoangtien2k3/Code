@@ -24,7 +24,7 @@ int songuyento (int n) {
         mà không nhất thiết cần phải xét tất cả các gí trị đến n;
         sqrt(n) lấy căn bậc 2 của "n" thì ta có thể đỡ phải chạy nhiều vòng for, có thể tối ưu được code khi chạy;                              
         */
-        if (n % i == 0) {
+        if (n % i == 0) { // xét điều kiện coi biến đàn diền có thể là biến có giá trị bằng  == 0 hay không
             count++; // đếm xem có bao nhieu so chia het cho cái index dó
             printf ("\n%d chia het cho %d", n, i);
         }
@@ -54,3 +54,4 @@ int main()
 
     return 0;
 }
+
