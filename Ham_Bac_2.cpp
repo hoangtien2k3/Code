@@ -44,12 +44,14 @@ int giaiPT(float a, float b, float c)
         if (delta > 0)
         {
             cout << "\nphuong trinh co 2 nghiem phan biet x1, x2 : ";
-            cout << "\n" << fixed << setprecision(2) << "x1 = " << (-b + sqrt(delta)) / (2 * a);
-            cout << "\n" << fixed << setprecision(2) << "x2 = " << (-b - sqrt(delta)) / (2 * a);
+            cout << "\n"
+                 << fixed << setprecision(2) << "x1 = " << (-b + sqrt(delta)) / (2 * a);
+            cout << "\n"
+                 << fixed << setprecision(2) << "x2 = " << (-b - sqrt(delta)) / (2 * a);
         }
         if (delta == 0)
         {
-            cout << fixed << setprecision(2) << "x = x1 = x2 = " << -b / (2 * a) ;
+            cout << fixed << setprecision(2) << "x = x1 = x2 = " << -b / (2 * a);
         }
         if (delta < 0)
         {
@@ -73,7 +75,6 @@ int main()
     giaiPT(a, b, c);
     return 0;
 }
-
 
 // CÁCH NÀY GIẢI CŨNG RẤT LÀ HAY : CÓ THỂ THAM KHẢO THÊM :
 

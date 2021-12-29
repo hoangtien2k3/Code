@@ -12,6 +12,15 @@ long giaiThua(long n)
     }
     return T;
 }
+// ĐỆ QUY :
+// int giaiThua(int n)
+// {
+//     if (n == 1 || n == 0)
+//     {
+//         return 1;
+//     }
+//     return n * giaiThua(n - 1);
+// }
 
 int main()
 {
