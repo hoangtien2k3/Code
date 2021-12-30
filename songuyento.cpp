@@ -19,7 +19,7 @@ int songuyento (int n) {
         printf ("\n%d KHONG PHAI LA SO NGUYEN TO ", n);
     }
 
-    for (int i = 2; i < n; i++) {  // i < n-1 // i <= sqrt(n) ;
+    for (int i = 2; i < n; i++) {  // i <= n-1 // i <= sqrt(n) ;
         /* có thể viết i < sqrt(n) vì mỗi số đều có 2 miền giá trị nên ta chỉ cần xét 1 miền gí trị
         mà không nhất thiết cần phải xét tất cả các gí trị đến n;
         sqrt(n) lấy căn bậc 2 của "n" thì ta có thể đỡ phải chạy nhiều vòng for, có thể tối ưu được code khi chạy;                              

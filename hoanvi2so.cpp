@@ -33,51 +33,51 @@ int main()
 
 
 
-Cách 2 : // Hoán vị 2 số sử dụng toán tử + và –
-#include <stdio.h>
-    int main()
-{
-    int a = 10, b = 5;
-    printf("Before swapping: a = %d, b = %d", a, b);
-    // Code to swap a and b:
-    a = a + b;
-    b = a - b;
-    a = a - b;
-    printf("\nAfter swapping: a = %d, b = %d", a, b);
-    return 0;
-}
+// Cách 2 : // Hoán vị 2 số sử dụng toán tử + và –
+// #include <stdio.h>
+//     int main()
+// {
+//     int a = 10, b = 5;
+//     printf("Before swapping: a = %d, b = %d", a, b);
+//     // Code to swap a and b:
+//     a = a + b;
+//     b = a - b;
+//     a = a - b;
+//     printf("\nAfter swapping: a = %d, b = %d", a, b);
+//     return 0;
+// }
 
 
 
 
-Cách 3 : Hoán vị 2 số nguyên dùng toán tử *và /
-#include <stdio.h>
-         int main()
-{
-    int a = 10, b = 5;
-    printf("Before swapping: a = %d, b = %d", a, b);
-    // Code to swap a and b:
-    a = a * b;
-    b = a / b;
-    a = a / b;
-    printf("\nAfter swapping: a = %d, b = %d", a, b);
-    return 0;
-}
+// Cách 3 : Hoán vị 2 số nguyên dùng toán tử *và /
+// #include <stdio.h>
+//          int main()
+// {
+//     int a = 10, b = 5;
+//     printf("Before swapping: a = %d, b = %d", a, b);
+//     // Code to swap a and b:
+//     a = a * b;
+//     b = a / b;
+//     a = a / b;
+//     printf("\nAfter swapping: a = %d, b = %d", a, b);
+//     return 0;
+// }
 
 
 
 
-Cách 4 : Sử dụng toán tử XOR
-#include <stdio.h>
-         int
-         main()
-{
-    int a = 10, b = 5;
-    printf("Before swapping: a = %d, b = %d", a, b);
-    // Code to swap a and b:
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
-    printf("\nAfter swapping: a = %d, b = %d", a, b);
-    return 0;
-}
+// Cách 4 : Sử dụng toán tử XOR
+// #include <stdio.h>
+//          int
+//          main()
+// {
+//     int a = 10, b = 5;
+//     printf("Before swapping: a = %d, b = %d", a, b);
+//     // Code to swap a and b:
+//     a = a ^ b;
+//     b = a ^ b;
+//     a = a ^ b;
+//     printf("\nAfter swapping: a = %d, b = %d", a, b);
+//     return 0;
+// }
