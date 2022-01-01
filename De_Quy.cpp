@@ -44,3 +44,8 @@ int main() {
     cout << ""<<n<<"" << "! = " << giaiThua(n);
     return 0;
 }
+
+
+
+
+// 
