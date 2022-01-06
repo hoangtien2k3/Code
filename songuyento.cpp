@@ -16,7 +16,7 @@ các số nguyên tố > số 2 đều là các số nguyên tố lẻ
 int songuyento (int n) {
     int count = 0;
     if (n < 2) {
-        printf ("\n%d KHONG PHAI LA SO NGUYEN TO ", n);
+        printf ("\n%d KHONG PHAI LA SO NGUYEN TO ");
     }
 
     for (int i = 2; i < n; i++) {  // i <= n-1 // i <= sqrt(n) ;
@@ -55,3 +55,14 @@ int main()
     return 0;
 }
 
+// bool nguyenTo(int n)
+// {
+//     if (n < 2)
+//         return false;
+//     for (int i = 2; i <= (int)sqrt(n); i++)
+//     {
+//         if (n % i == 0)
+//             return false;
+//     }
+//     return true;
+// }
