@@ -2,12 +2,13 @@
 // Câu 1: sử dụng ngôn ngữ lập trình C , viết chương trình thực hiện chức năng sau
 
 #include <stdio.h>
-
+// cách 1:
 // int CountNumber (int n) {
 //     if (n < 10) return 1;
 //     return 1 + CountNumber(n / 10);
 // }
 
+// cách 2:
 int CountNumber(int n)
 {
     int count = 0;
