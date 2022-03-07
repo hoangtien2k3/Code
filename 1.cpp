@@ -14,11 +14,16 @@ float tinhToan(float n)
     }
     return sum;
 }
+
+void increment(float &n){
+    n++;
+}
+
 int main()
 {
     float n;
     std::cout << "Nhap vao n = ";
     std::cin >> n;
-    std::cout << std::fixed << std::setprecision(4) << tinhToan(n);
+    std::cout << std::fixed << std::setprecision(4) << tinhToan(n) << std::endl;
     return 0;
 }
