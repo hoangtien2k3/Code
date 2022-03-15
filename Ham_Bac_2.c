@@ -12,10 +12,8 @@ TH1: a != 0 => ax^2 + bx + c = 0 => giải pt bậc 2
                             TH3: delta < 0 => phương trình vô nghiệm
 */
 
-#include <iostream>
-#include <iomanip>
+#include <stdio.h>
 #include <math.h>
-using namespace std;
 
 int giaiPT(float a, float b, float c)
 {
@@ -26,16 +24,16 @@ int giaiPT(float a, float b, float c)
         {
             if (c == 0)
             {
-                cout << "phuong trinh vo so nghiem";
+                printf ("phuong trinh vo so nghiem");
             }
             if (c != 0)
             {
-                cout << "phuong trinh vo nghiem";
+                printf ("phuong trinh vo nghiem");
             }
         }
         if (b != 0)
         {
-            cout << fixed << setprecision(2) << "x = " << -c / b;
+            printf ("x = %f",-c / b);
         }
     }
     else
@@ -43,10 +41,9 @@ int giaiPT(float a, float b, float c)
         delta = b * b - 4 * a * c;
         if (delta > 0)
         {
-            cout << "\nphuong trinh co 2 nghiem phan biet x1, x2 : ";
-            cout << "\n"
-                 << fixed << setprecision(2) << "x1 = " << (-b + sqrt(delta)) / (2 * a);
-            cout << "\n"
+            printf ("\nphuong trinh co 2 nghiem phan biet x1, x2 : ");
+            printf ("\nx1 = ", (-b + sqrt(delta)) / (2 * a));
+            printf ("\n");
                  << fixed << setprecision(2) << "x2 = " << (-b - sqrt(delta)) / (2 * a);
         }
         if (delta == 0)
@@ -76,8 +73,9 @@ int main()
     return 0;
 }
 
-// CÁCH NÀY GIẢI CŨNG RẤT LÀ HAY : CÓ THỂ THAM KHẢO THÊM :
 
+
+// CÁCH NÀY GIẢI CŨNG RẤT LÀ HAY : CÓ THỂ THAM KHẢO THÊM :
 // #include <iostream>
 // #include <math.h>
 // using namespace std;
