@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-void divide (int n, int a[], int b[]) {
+int *divide (int n, int a[], int b[]) {
     int sum1 = 0, sum2 = 0;
     for (int i = 0; i < n; i++)
     {
@@ -21,6 +21,7 @@ void divide (int n, int a[], int b[]) {
     for (int i = 0; i < 2; i++) {
         printf ("%d ", b[i]);
     }
+    return b;
 }
 
 int main() {

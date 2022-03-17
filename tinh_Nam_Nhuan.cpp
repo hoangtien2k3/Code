@@ -9,14 +9,15 @@ Năm nhuận theo dương lịch là như thế nào:
 
 #include <iostream>
 
-int tinhNamNhuan(long n)
+
+void tinhNamNhuan(int n)
 {
     if (n <= 0 || n > 100000)
     {
         std::cout << "Error";
     }
     else
-    { // n > 0
+    { 
         if ((n % 4 == 0 && n % 100 != 0) || n % 400 == 0)
         {
             std::cout << "Nam nhuan";
@@ -26,21 +27,17 @@ int tinhNamNhuan(long n)
             std::cout << "Khong phai nam nhuan";
         }
     }
-    return 0;
 }
 int main()
 {
-    long n;
-    std:: cout << "nhap vao n = ";
-    /*do {
+    int n;
+    std::cout << "nhap vao nam: n = ";
+    do {
         std::cin >> n;
             if (n < 0 || n > 100000) {
                 std::cout << "INVALID";
             }
-    } while (n < 0);\
-    */
-    // std::cout << "Nhap vao n(so nam) = ";
-    std::cin >> n;
+    } while (n < 0 || n > 100000);
     tinhNamNhuan(n);
     return 0;
 }

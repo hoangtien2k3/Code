@@ -12,6 +12,7 @@ int input_Array(int n, int arr[])
             printf("Xin nhap lai gia tri n :");
         }
     } while (n > 100);
+    
     for (int i = 0; i < n; i++)
     {
         printf("arr[%d] = ", i);
