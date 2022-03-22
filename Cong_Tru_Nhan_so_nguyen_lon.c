@@ -27,7 +27,7 @@ int StrToNumArr (char a[], char b[], int A[], int B[]) {
     }
     return len;
 }
- 
+
 int SumBig (int A[], int B[], int len, int C[]) {
     for (int i=len-1; i>=0; i--) {
         if (i!=0) {
