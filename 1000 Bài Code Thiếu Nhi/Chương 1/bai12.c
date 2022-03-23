@@ -1,13 +1,13 @@
 
 #include<stdio.h>
 #include<conio.h>
+#include<math.h>
 
 int main() {
-    int n;
-    scanf ("%d", &n);
-    float sum = 0;
+    float x, sum = 0, n;
+    scanf ("%f%f", &x, &n);
     for (int i=1; i<=n; i++) {
-        sum += (float)i/(i+1);
+        sum += pow(x, i);
     }
     printf ("%f", sum);
     getch();

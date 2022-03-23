@@ -3,13 +3,12 @@
 #include<conio.h>
 
 int main() {
-    int n;
+    int n, sum=1;
     scanf ("%d", &n);
-    float sum = 0;
     for (int i=1; i<=n; i++) {
-        sum += (float)i/(i+1);
+        sum *= i;
     }
-    printf ("%f", sum);
+    printf ("%d! = %d",n, sum);
     getch();
     return 0;
 }

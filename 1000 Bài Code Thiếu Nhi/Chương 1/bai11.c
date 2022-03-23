@@ -1,15 +1,16 @@
-
 #include<stdio.h>
 #include<conio.h>
+#include<math.h>
 
 int main() {
-    int n;
+    int n, T = 1, sum = 0;
     scanf ("%d", &n);
-    float sum = 0;
     for (int i=1; i<=n; i++) {
-        sum += (float)i/(i+1);
+        T *= i;
+        sum += T;
     }
-    printf ("%f", sum);
+    printf ("%d", sum);
+
     getch();
     return 0;
 }
