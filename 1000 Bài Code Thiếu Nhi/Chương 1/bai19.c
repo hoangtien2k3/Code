@@ -26,8 +26,8 @@ int main()
 
     while(i <= n)
     {
-        T = pow(x, (2 * i ));
-        M = i * 2;
+        T = pow(x, (2 * i + 1 ));
+        M = i * 2 + 1;
         N = N * M * (M - 1);
         S = S + T/N;
         i++;

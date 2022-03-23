@@ -12,7 +12,6 @@ int SoHoanHao(long n)
     {
         if (n % i == 0)
         {
-            //cout << ""<<n<<" % "<<i<<" "; 
             sum = sum + i;
         }
     }
