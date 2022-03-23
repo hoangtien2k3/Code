@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int TinhToan (double a, char x, double b) 
+int TinhToan(double a, char x, double b) 
 {
     switch (x)
     {
