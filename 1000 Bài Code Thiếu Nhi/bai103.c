@@ -1,6 +1,6 @@
+
 #include<stdio.h>
 #include<conio.h>
-#include<stdbool.h>
 
 const int minYear = 1900, maxYear = 10000;
 int KiemTraNamNhuan(int nam)
@@ -10,8 +10,7 @@ int KiemTraNamNhuan(int nam)
 int TimSoNgayTrongThang(int thang, int nam)
 {
     int NgayTrongThang;
-    switch(thang)
-    {
+    switch(thang) {
     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         NgayTrongThang = 31;
         break;
@@ -19,32 +18,30 @@ int TimSoNgayTrongThang(int thang, int nam)
         NgayTrongThang = 30;
         break;
     default:
-        return (KiemTraNamNhuan(nam))?(NgayTrongThang = 29):(NgayTrongThang = 28);
+        return (KiemTraNamNhuan(nam)) ? (NgayTrongThang = 29) : (NgayTrongThang = 28);
+        break;
     }
     return NgayTrongThang;
 }
 
-void TimNgayKeTiep(int Ngay, int Thang, int Nam)
+void TimNgayTruocDo(int Ngay, int Thang, int Nam)
 {
     int NgayTrongThang = TimSoNgayTrongThang(Thang, Nam);
-    if (Ngay < NgayTrongThang)  // Tăng ngày lên
+    if(Ngay == 1)            // Nếu ngày nhập vào là 1
     {
-        Ngay++;
-    }
-    else if (Thang < 12)     // Ngày kế tiếp là đầu tháng
-    {
-        Ngay = 1; Thang++;
-    }
-    else                      // Ngày kế là đầu năm mới tức là hiện tai đang là tháng 12
-    {
-        Ngay = Thang = 1;
-        Nam++;
-    }
-    printf("\nNgay ke tiep la: %d - %d - %d ", Ngay, Thang, Nam);
+        Ngay = NgayTrongThang;        // ngày trước đó là số ngày trong tháng trước 
+        if(Thang == 1)            // Nếu tháng là 1
+        {
+            Thang = 12;
+            Nam--;
+        } else                     // Tháng khác 1
+            Thang--;
+    }else                // Ngày khác 1
+        Ngay--;
+        printf("\nNgay truoc do la: %d - %d - %d ", Ngay, Thang, Nam);
 }
 
-int main()
-{
+int main(){
     int Ngay, Thang, Nam;
 
     do
@@ -75,8 +72,8 @@ int main()
             printf("\nDu lieu ngay khong hop le. Xin kiem tra lai!");
         }
     }while(Ngay < 1 || Ngay > NgayTrongThang);
-    
-    TimNgayKeTiep(Ngay, Thang, Nam);
+
+    TimNgayTruocDo(Ngay, Thang, Nam);
 
     getch();
     return 0;

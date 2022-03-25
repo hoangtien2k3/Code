@@ -1,64 +1,31 @@
-
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
 
-int CheckOut(int month, int year) {
-    switch(month) {
-        case 1:
-            printf ("Co 31 ngay");
+int ngay(int month, int year) {
+    int NgayTrongNam;
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            NgayTrongNam = 31;
             break;
-        case 2:
-            if (year % 4 == 0 && year % 100 == 0 || year % 400 == 0) {
-                printf ("Co 29 ngay");
-            } else {
-                printf ("Co 28 ngay");
-            }
-            break;
-        case 3: 
-            printf ("Co 31 ngay");
-            break;
-        case 4:
-            printf ("Co 30 ngay");
-            break;
-        case 5:
-            printf ("Co 31 ngay");
-            break;
-        case 6:
-            printf ("Co 30 ngay");
-            break;
-        case 7:
-            printf ("Co 31 ngay");
-            break;
-        case 8: 
-            printf ("Co 31 ngay");
-            break;
-        case 9:
-            printf ("Co 30 ngay");
-            break;
-        case 10:
-            printf ("Co 31 ngay");
-            break;
-        case 11:
-            printf ("Co 30 ngay");
-            break;
-        case 12:
-            printf ("Co 31 ngay");
+        case 4: case 6: case 9: case 11:
+            NgayTrongNam = 30;
             break;
         default:
-            if (year % 4 == 0 && year % 100 == 0 || year % 400 == 0) {
-                printf ("Co 29 ngay");
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                NgayTrongNam = 29;
             } else {
-                printf ("Co 28 ngay");
+                NgayTrongNam = 28;
             }
             break;
     }
+    return NgayTrongNam;
 }
 
-
-int main() {
+int main(){
     int month, year;
-    scanf ("%d%d", &month, &year);
-    CheckOut(month, year);
+    printf ("Nhap vao month = ");
+    scanf ("%d", &month);
+    printf ("Nhap vao year = ");
+    scanf ("%d", &year);
+    printf ("Co %d ngay !", ngay(month, year));
     return 0;
 }
