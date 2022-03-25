@@ -1,3 +1,6 @@
+
+// đếm các ước chẵn.
+
 #include<stdio.h>
 #include<conio.h>
 

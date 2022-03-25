@@ -1,4 +1,6 @@
 
+// xét xem a và b nhập từ bàn phím có cùng dấu hay khác dấu.
+
 #include<stdio.h>
 
 int main() {

@@ -1,3 +1,6 @@
+
+// nhập vào ngày tháng năm, in ra ngày kế tiếng ngày đó.
+
 #include<stdio.h>
 #include<conio.h>
 #include<stdbool.h>

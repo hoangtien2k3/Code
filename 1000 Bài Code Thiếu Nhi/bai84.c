@@ -1,4 +1,5 @@
-// biện luận pt: ax + b = 0
+
+// biện luận pt: ax + b = 0.
 
 #include<stdio.h>
 

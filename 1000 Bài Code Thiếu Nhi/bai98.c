@@ -1,4 +1,6 @@
+
 // giải bất phương trình bằng pp Cramer
+
 #include<stdio.h>
 #include<math.h>
 #include<conio.h>

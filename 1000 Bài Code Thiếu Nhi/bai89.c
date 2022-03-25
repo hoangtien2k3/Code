@@ -1,4 +1,6 @@
 
+// tổng số từ 0->n.
+
 #include<stdio.h>
 
 int main() {

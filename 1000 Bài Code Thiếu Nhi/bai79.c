@@ -1,4 +1,6 @@
 
+// Nhập vao n và đếm xem có bao nhiêu chữ số.
+
 #include<stdio.h>
 
 long long Count(long long n) {

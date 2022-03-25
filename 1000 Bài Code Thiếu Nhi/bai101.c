@@ -1,3 +1,6 @@
+
+// kiểm tra xem tháng đó có bao nhiêu ngày.
+
 #include<stdio.h>
 
 int ngay(int month, int year) {

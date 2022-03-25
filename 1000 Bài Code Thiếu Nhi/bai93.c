@@ -1,4 +1,6 @@
 
+// hàm kiểm tra số nguyên tố.
+
 #include<stdio.h>
 #include<conio.h>
 

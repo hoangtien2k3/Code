@@ -1,3 +1,6 @@
+
+// Kiểm tra số nguyên tố.
+
 #include <stdio.h>
 #include<math.h>
 

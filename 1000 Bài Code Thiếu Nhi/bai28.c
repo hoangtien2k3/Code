@@ -1,3 +1,6 @@
+
+// tính tổng các ước.
+
 #include<stdio.h>
 #include<conio.h>
 

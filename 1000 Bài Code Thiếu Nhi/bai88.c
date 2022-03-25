@@ -1,3 +1,6 @@
+
+// in ra chữ cái từ A -> Z.
+
 #include<stdio.h>
 
 int main() {

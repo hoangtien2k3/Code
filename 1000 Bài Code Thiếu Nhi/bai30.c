@@ -1,3 +1,6 @@
+
+// kiểm tra số hoàn thiên. 
+
 #include<stdio.h>
 #include<conio.h>
 

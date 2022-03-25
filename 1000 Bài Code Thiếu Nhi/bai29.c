@@ -1,3 +1,6 @@
+
+// in ra các ước số chẵn từ 1->n.
+
 #include<stdio.h>
 #include<conio.h>
 

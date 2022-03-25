@@ -1,4 +1,5 @@
-// tim m lớn nhất sao cho 1 + 2 + 3 + ... + m < N
+
+// tim m lớn nhất sao cho 1 + 2 + 3 + ... + m < N.
 
 #include<stdio.h>
 

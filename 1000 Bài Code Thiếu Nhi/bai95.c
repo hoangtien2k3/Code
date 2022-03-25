@@ -1,4 +1,6 @@
 
+// tính giá trị tuyệt đối của 3 số thực nhập từ bàn phím.
+
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>

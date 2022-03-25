@@ -1,4 +1,6 @@
 
+// tính x + (x^2)/(1+2) + ... + (x^n)/(1+2+3+...+n).
+
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>

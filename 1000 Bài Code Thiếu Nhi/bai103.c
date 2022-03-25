@@ -1,4 +1,6 @@
 
+// Nhập vào ngày tháng năm. In ra ngày trước ngày đó.
+
 #include<stdio.h>
 #include<conio.h>
 

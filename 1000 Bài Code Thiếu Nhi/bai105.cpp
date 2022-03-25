@@ -1,3 +1,4 @@
+
 // Nhập vào số nguyên có 2 chữ số và in ra cách đọc của số đó
 
 #include<stdio.h>

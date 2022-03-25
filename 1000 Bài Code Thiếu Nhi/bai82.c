@@ -1,3 +1,6 @@
+
+// Tìm max 3 số a, b, c. 
+
 #include<stdio.h>
 
 int main() {

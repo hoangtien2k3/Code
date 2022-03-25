@@ -1,4 +1,6 @@
-// ước chung lớn nhất của 2 số a và b
+
+// ước chung lớn nhất của 2 số a và b.
+
 #include<stdio.h>
 #include<conio.h>
 

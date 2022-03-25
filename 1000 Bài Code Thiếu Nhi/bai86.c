@@ -1,4 +1,6 @@
 
+// tính tổng 1^3 + 2^3 + ... + n^3.
+
 #include<stdio.h>
 #include<math.h>
 

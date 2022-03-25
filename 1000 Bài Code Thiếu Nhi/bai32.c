@@ -1,3 +1,6 @@
+
+// kiểm tra số chính phương.
+
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>

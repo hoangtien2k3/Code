@@ -1,4 +1,5 @@
-// in tất cả các số nguyên dương nhỏ hơn 100
+
+// in tất cả các số nguyên dương nhỏ hơn 100.
 
 #include<stdio.h>
 
