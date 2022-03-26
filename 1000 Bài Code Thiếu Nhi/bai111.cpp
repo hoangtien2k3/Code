@@ -7,19 +7,94 @@
 
 
 /*  a. vẽ tam giác cân
-    với h = 4
-                *
-            *   *   *
-        *   *   *   *   *   
-    *   *   *   *   *   *   *
+                *                   1  |    i=1, j=1 ->[4, 4] ngược lại in khoảng trắng "   "    
+            *   *   *               2  |    i=2, j=3 ->[3, 5] ngược loại in  "   "
+        *   *   *   *   *           3  |    i=3, j=5 ->[2, 6] ngược lại in "   "
+    *   *   *   *   *   *   *       4  |    i=4, j=7 ->[1, 7] 
+
+    1   2   3   4   5   6   7               [a, b] = [h-i+1, h+i-1];
+
+*/
+void Tam_Giac_Can(int h) {
+    for (int i = 1; i <= h; i++) {
+		for (int j = 1; j <= 2 * h - 1; j++) {
+			if (h - i  + 1 <= j && j <= h + i - 1) { // [a, b] = [h-i+1, h+i-1];
+				printf(" * ");
+			} else {
+                printf("   ");
+            }
+		}
+		printf("\n");
+	} 
+}
+
+
+
+
+/*  b.vẽ tam giác cân rỗng.
+                *                      i=1, j=4
+            *       *                  i=2, j=3,5
+        *               *              i=3, j=2,6
+    *   *   *   *   *   *   *          i=4, j=1,2,3,4,5,6,7
+
+    1   2   3   4   5   6   7         
+*/
+void Tam_Giac_Can_Rong(int h) {
+    for (int i = 1; i < h; i++) { // tại sao i < h , mục đích để nó không duyệt vòng cuối cùng
+		for (int j = 1; j <= 2 * h - 1; j++) {
+			if (j == (h - i  + 1) || j == (h + i - 1)) { // [a, b] = [h-i+1, h+i-1];
+				printf(" * ");
+			} else {
+                printf("   ");
+            }
+		}
+		printf("\n");
+	} 
+    for (int i=1; i<=2*h-1; i++) {
+        printf (" * ");
+    }
+}
+
+
+
+
+/*  c. tam giác vuông cân đặc.
+
+    *                       i=1, j=1
+    *   *                   i=2, j=1,2
+    *   *   *               i=3, j=1,2,3 
+    *   *   *   *           i=4, j=1,2,3,4
     
+    1   2   3   4
+
 */
 
-void TamGiacCan(int h) {
-    // c1:
-    for (int i=1; i<=h; i++) {
-        for (int j=1; j < 2*h; j++) {
-            if (abs(h-j) <= (i-1)){
+void Tam_Giac_Vuong_Can(int h) {
+    for (int i = 1; i <= h; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf (" * ");
+        }
+        printf ("\n");
+    }
+}
+
+
+
+
+/* d. vẽ tam giác vuông cân rỗng.
+
+    *                       i=1, j=1
+    *   *                   i=2, j=1,2
+    *       *               i=3, j=1,3
+    *           *           i=4, j=1,4
+    *   *   *   *   *       i=5, j=1,2,3,4,5
+    
+    1   2   3   4   5
+*/
+void Tam_Giac_Vuong_Can_Rong(int h) {
+    for (int i = 1; i < h; i++) {
+        for (int j = 1; j <= i; j++) {
+            if (j == 1 || j == i) {
                 printf (" * ");
             } else {
                 printf ("   ");
@@ -27,19 +102,9 @@ void TamGiacCan(int h) {
         }
         printf ("\n");
     }
-
-    // c2:
     for (int i=1; i<=h; i++) {
-		for (int j=1; j <= (2*h-1); j++) {
-			if (h - i < j && j < h + i) {
-				printf(" * ");
-			} else {
-                printf("   ");
-            }
-		}
-		printf("\n");
-	}
-
+        printf (" * ");
+    }
 }
 
 
@@ -55,7 +120,16 @@ int main() {
         }
     }while(h < 0);
 
-    TamGiacCan(h);
+    Tam_Giac_Can(h);
+    printf ("\n\n");
 
+    Tam_Giac_Can_Rong(h);
+    printf ("\n\n");
+
+    Tam_Giac_Vuong_Can(h);
+    printf ("\n\n");
+
+    Tam_Giac_Vuong_Can_Rong(h);
+    printf ("\n\n");
 
 }
