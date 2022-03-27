@@ -26,6 +26,5 @@ int main() {
     }
     std::cout << std::endl;
     std::cout << "Tong can co " << count << " phuong an!" << std::endl;
-
     return 0;
 }
