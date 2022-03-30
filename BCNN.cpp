@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int New (int year) {
+int New (int n) {
     for (int i=0; i<=n; i++) {
         if (n % 2 == 0) {
             cout << "YES";
@@ -20,9 +20,10 @@ int New (int year) {
     }
     return 0;
 }
+
 int main() {
-    int year;
-    cin >> year;
-    New (year);
+    int n;
+    cin >> n;
+    New (n);
     return 0;
 }

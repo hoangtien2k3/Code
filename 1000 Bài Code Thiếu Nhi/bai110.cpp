@@ -5,6 +5,7 @@
 
 /*
     x * 1000 + y * 2000 + z * 5000 = 200.000
+    
     200 * 1000 = 200000 => x thuộc [0, 200]
     100 * 2000 = 200000 => y thuộc [0, 100]
     40 * 5000 = 200000 => z thuộc [0, 40]
@@ -18,7 +19,7 @@ int main() {
         for (int j=0; j<=100; j++) {
             for (int k=0; k<=40; k++) {
                 if (i*1000 + j*2000 + k*5000 == 200000) {
-                    printf ("\n%d to 1000(VND), %d to 2000(VND), %d to 5000(VND)",i, j, k);
+                    printf ("\nCan %d to 1000(VND) \tCan %d to 2000(VND) \tCan %d to 5000(VND)",i, j, k);
                     count++;
                 }
             }

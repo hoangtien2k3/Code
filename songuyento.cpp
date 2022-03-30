@@ -17,11 +17,11 @@ int songuyento (int n) {
     for (int i = 2; i < n; i++) {
         if (n % i == 0) { 
             count++; 
-            printf ("\n%d chia het cho %d", n, i);
+            printf ("\n%d chia het cho %d", n, i);;t
         }
     }
     if (count == 0) {
-        printf ("\n%d LA SO NGUYEN TO ", n);
+        printf ("\n%d LA SO NGUYEN TO ", n);                                                                                                                    
     } else {
         printf ("\n%d KHONG PHAI LA SO NGUYEN TO ", n);
     }

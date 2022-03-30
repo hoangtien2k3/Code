@@ -1,5 +1,3 @@
-int SumArray1(int *a, int n) {
-//     if (n == 1)
-//         return *a;
-//     return a[n-1] + SumArray1(a, n-1);
-// }
+    // for (int i=0; decimalNumber != 0; i++, decimalNumber /= 2) {
+    //     binaryNumber += (decimalNumber % 2) * pow(10, i);
+    // }
