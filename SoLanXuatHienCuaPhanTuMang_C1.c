@@ -11,7 +11,7 @@ int a[100], b[100], n;
 
 void dem(){
     for (int i=0; i<n; i++) {
-        if (b[i] == 1){
+        if (b[i]){ // nếu phần tử b[i] xuất hiện
             int count = 1;
             b[i] = 0; // gán phân tử đầu cần xét của vòng for thứ 1 bằng 0(để lần sau ko xét nữa)
             for (int j = i + 1; j <n; j++) {

@@ -37,7 +37,7 @@ int Convert_String_to_Integer(char a[], char b[], int A[], int B[])
     return len;
 }
 
-int SumBig(int A[], int B[], int len, int C[])
+int *SumBig(int A[], int B[], int len, int C[])
 {
     for (int i = len - 1; i >= 0; i--)
     {
@@ -50,7 +50,7 @@ int SumBig(int A[], int B[], int len, int C[])
         else
             C[i] = A[i] + B[i]; 
     }
-    return len;
+    return C;
 }
 
 int main()

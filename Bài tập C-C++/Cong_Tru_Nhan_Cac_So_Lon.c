@@ -199,7 +199,6 @@ int main()
         {
             printf("%d", Pr[i]);
         }
-    }
-    
+    }  
     return 0;
 }
