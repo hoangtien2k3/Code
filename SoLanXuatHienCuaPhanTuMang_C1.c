@@ -6,35 +6,37 @@
     thì tiến hành đếm số lần xuất hiện của nó.
 
 */
-#include<stdio.h>
-int a[100], b[100], n;
 
-void dem(){
+#include<stdio.h>
+
+int arr[100], brr[100], n; // biến toàn cụ (global variable)
+
+void Count_Element_Array () {
+    int count; // biến cục bộ (local variable)
     for (int i=0; i<n; i++) {
-        if (b[i]){ // nếu phần tử b[i] xuất hiện
-            int count = 1;
-            b[i] = 0; // gán phân tử đầu cần xét của vòng for thứ 1 bằng 0(để lần sau ko xét nữa)
-            for (int j = i + 1; j <n; j++) {
-                if (a[j] == a[i]) {
+        if (brr[i] == 1) {
+            count = 1;
+            for (int j = i+1; j<n; j++) {
+                if (arr[i] == arr[j]) {
                     count++;
-                    b[j] = 0;
+                    brr[j] = 0; // để nó quy lại lệnh if đầu tiên nó sẽ không xét nữa
                 }
             }
-            printf ("Gia tri %d xuat hien %d lan!\n", a[i], count);
+            printf ("\nGia tri %d xuat hien %d lan!", arr[i], count);
         }
     }
 }
 
 int main() {
-    printf ("Input n = ");
+    printf ("Nhap vao n  = ");
     scanf ("%d", &n);
     for (int i=0; i<n; i++) {
-        printf ("a[%d] = ", i);
-        scanf ("%d", &a[i]);
+        printf ("arr[%d] = ", i);
+        scanf ("%d", &arr[i]);
     }
     for (int i=0; i<n; i++) {
-        b[i] = 1;
+        brr[i] = 1;
     }
-    dem();
+    Count_Element_Array();
     return 0;
 }
