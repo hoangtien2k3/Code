@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int Convert_String_to_Integer(char a[], char b[], int A[], int B[])
+int StrToNumArr(char a[], char b[], int A[], int B[])
 {
     int lenA = strlen(a);
     int lenB = strlen(b);
@@ -37,7 +37,7 @@ int Convert_String_to_Integer(char a[], char b[], int A[], int B[])
     return len;
 }
 
-int *SumBig(int A[], int B[], int len, int C[])
+int SumBig(int A[], int B[], int C[], int len)
 {
     for (int i = len - 1; i >= 0; i--)
     {
@@ -45,32 +45,34 @@ int *SumBig(int A[], int B[], int len, int C[])
         {
             int x = A[i] + B[i];
             C[i] = x % 10;
-            B[i - 1] += (x / 10);
+            B[i - 1] = B[i - 1] + (x / 10);
         }
         else
             C[i] = A[i] + B[i]; 
     }
-    return C;
+    return len;
 }
+
 
 int main()
 {
     char a[1001] = "";
     char b[1001] = "";
-    printf ("Nhap vao a = ");
-    scanf ("%s", a);
-    printf ("Nhap vao b = ");
-    scanf ("%s", b);
+    printf ("Nhap vao a = "); scanf ("%s", a);
+    printf ("Nhap vao b = "); scanf ("%s", b);
 
-    int As[1003];
-    int Bs[1003];
-    int Sum[1004]; // mảng Sum chứa tổng a + b và luôn lớn hơn a || b 1 phần tử trong mảng
-    int len = Convert_String_to_Integer(a, b, As, Bs);
-    int lenSum = SumBig(As, Bs, len, Sum);
+    int A[1003];
+    int B[1003];
+    int C[1003]; // để lưu kết quả a + b
+    int len = StrToNumArr(a, b, A, B);
+    int lenSum = SumBig(A, B, C, len); // lấy độ dài mảng C[]
+
     printf ("Tong a + b = ");
     for (int i = 0; i < lenSum; i++)
     {
-        printf("%d", Sum[i]);
+        printf("%d", C[i]);
     } 
+
     printf("\n");
+    return 0;
 }
