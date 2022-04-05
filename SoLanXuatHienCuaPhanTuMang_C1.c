@@ -9,17 +9,16 @@
 
 #include<stdio.h>
 
-int arr[100], brr[100], n; // biến toàn cụ (global variable)
+int arr[100], brr[100], n, count;
 
 void Count_Element_Array () {
-    int count; // biến cục bộ (local variable)
     for (int i=0; i<n; i++) {
-        if (brr[i] == 1) {
+        if (brr[i]) {
             count = 1;
-            for (int j = i+1; j<n; j++) {
+            for (int j=i+1; j<n; j++) {
                 if (arr[i] == arr[j]) {
                     count++;
-                    brr[j] = 0; // để nó quy lại lệnh if đầu tiên nó sẽ không xét nữa
+                    brr[j] = 0;
                 }
             }
             printf ("\nGia tri %d xuat hien %d lan!", arr[i], count);
@@ -28,8 +27,8 @@ void Count_Element_Array () {
 }
 
 int main() {
-    printf ("Nhap vao n  = ");
-    scanf ("%d", &n);
+    printf("Nhap vao n = ");
+    scanf("%d", &n);
     for (int i=0; i<n; i++) {
         printf ("arr[%d] = ", i);
         scanf ("%d", &arr[i]);

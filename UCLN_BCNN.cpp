@@ -17,6 +17,24 @@ int main() {
         lcm++;
     }
     printf( "BSCNN (a, b): %u\n", lcm );
-    
+
     return 0;
 }
+
+
+
+/////////// 
+// Hoặc tìm UCLN bằng cách này:
+// #include <stdio.h>
+//     int main() {
+//     unsigned a, b, c;
+//     printf( "Nhap cap (a, b): " );
+//     scanf( "%u%u", &a, &b );
+
+//     c = a * b;
+//     while ( a - b ) ( a > b ) ? ( a -= b ) : ( b -= a );
+//     printf( "USCLN (a, b): %u\n", a );
+//     printf( "BSCNN (a, b): %u\n", c/a );
+
+//     return 0;
+// }
