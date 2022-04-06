@@ -504,67 +504,128 @@ void Hinh_Nguoc_Trong_Dong (int h) {
     }
 }
 
+
+/*
+    1   2   3   4   5   6   7
+
+    *   *   *   *   *   *   *                    *
+    *   *               *   *
+    *   *   *       *   *   *
+    *   *   *   *   *   *   *
+    *   *   *       *   *   *
+    *   *               *   *
+    *   *   *   *   *   *   *                   * 
+*/
+void Hinh_Trong_Dong_Vui (int h) {
+    printf ("Hinh_19:\t\n\n");
+    for (int i=1; i<=2*h-1; i++) {
+        printf (" * ");
+    }
+    printf ("\n");
+    for (int i=h-1; i>=1; i--) {
+        for (int j=2*h-1; j>=1; j--) {
+            if (h-i+1 >= j || h+i-1 <= j) {
+                printf (" * ");
+            } else {
+                printf ("   ");
+            }
+        }
+        printf ("\n");
+    }
+    for (int i=2; i<h; i++) {
+        for (int j = 1; j<=2*h-1; j++) {
+            if (h-i+1 >= j || j >= h+i-1) {
+                printf (" * ");
+            } else {
+                printf ("   ");
+            }
+        }
+        printf ("\n");
+    }
+    for (int i=1; i<=2*h-1; i++) {
+        printf (" * ");
+    }
+}
+
+
+/*
+    1   2   3   4   5   6   7
+    *   *   *   *   *   *   *
+    *   *               *   *
+    *       *       *       *
+    *           *           *
+    *       *       *       *
+    *   *               *   *
+    *   *   *   *   *   *   *
+*/
+void Hinh_Vuong_Rong_Ngu (int h) {
+    printf ("Hinh_20:\t\n\n");
+    for (int i=1; i<=2*h-1; i++) {
+        printf (" * ");
+    }
+    printf ("\n");
+
+    for (int i=h; i>=2; i--) {
+        for (int j = 2*h-1; j>=1; j--) {
+            if ((h-i+1 == j || h+i-1 == j)) {
+                if (h-i+1 == 1 || h+i-1 == h) {
+                    printf (" * ");
+                }
+            } else{
+                printf ("   ");
+            }
+        }
+    }
+}
+
+
+
 int main() {
     int h;
     do {
         printf ("\nNhap vao do dai h = ");
         scanf("%d", &h);
     }while(h < 0 && printf("Nhap lai chieu cao h: "));
-
     Tam_Giac_Can(h);
     printf ("\n\n\n");
-
     Tam_Giac_Can_Nguoc(h);
     printf("\n\n\n");
-
     Tam_Giac_Can_Rong(h);
     printf ("\n\n\n");
-
     Tam_Giac_Can_Rong_Nguoc(h);
     printf ("\n\n\n");
-
     Tam_Giac_Vuong_Can(h);
     printf ("\n\n\n");
-
     Tam_Giac_Vuong_Can_Nguoc(h);
     printf ("\n\n\n");
-
     Tam_Giac_Vuong_Can_Rong(h);
     printf ("\n\n\n");
-
     Tam_Giac_Vuong_Can_Rong_Nguoc(h);
     printf ("\n\n\n");
-
     Hinh_Thoi(h);
     printf ("\n\n\n");
-
     Hinh_Chong_Nhau(h);
     printf ("\n\n\n");
-
     Hinh_Chong_Nhau_Rong(h);
     printf ("\n\n\n");
-
     Hinh_Thoi_Rong_Trong(h);
     printf ("\n\n\n");
-
     Hinh_Thoi_Rong(h);
     printf("\n\n\n");
-
     Hinh_Vuong(h);
     printf ("\n\n\n");
-
     Hinh_Vuong_Rong(h);
     printf ("\n\n\n");
-
     Hinh_Binh_Hanh(h);
     printf ("\n\n\n");
-
     Hinh_Binh_Hanh_Nguoc(h);
     printf ("\n\n\n");
-
     Hinh_Nguoc_Trong_Dong(h);
     printf ("\n\n\n");
-
+    Hinh_Trong_Dong_Vui(h);
+    printf ("\n\n\n");
+    Hinh_Vuong_Rong_Ngu(h);
+    printf ("\n\n\n");
 
     return 0;
 }
