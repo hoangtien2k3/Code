@@ -624,8 +624,8 @@ int main() {
     printf ("\n\n\n");
     Hinh_Trong_Dong_Vui(h);
     printf ("\n\n\n");
-    Hinh_Vuong_Rong_Ngu(h);
-    printf ("\n\n\n");
+    // Hinh_Vuong_Rong_Ngu(h);
+    // printf ("\n\n\n");
 
     return 0;
 }
