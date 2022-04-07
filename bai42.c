@@ -17,6 +17,7 @@ int main()
     } while (n < 0 && printf("Error: (n >= 0)\n"));
 
     // do {
+        
     //     printf ("\nnhap vao gia tri n = ");
     //     scanf ("%d", &n);
     //     if (n < 0) {
