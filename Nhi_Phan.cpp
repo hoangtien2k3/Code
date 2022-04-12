@@ -17,48 +17,102 @@
  */
  
 // Cách 1:
-#include <stdio.h>
-#include <math.h>
+// #include <stdio.h>
+// #include <math.h>
  
-long long Dec2Bin(int decimalNumber) 
-{
-    long long binaryNumber = 0;
-    int i = 0;
-    while (decimalNumber != 0)
-    {
-        binaryNumber += (decimalNumber % 2) * pow(10, i);
+// int Binary_N(int decimalNumber) 
+// {
+//     int binaryNumber = 0;
+//     int i = 0;
+//     while (decimalNumber != 0)
+//     {
+//         binaryNumber += (decimalNumber % 2) * pow(10, i);
+//         decimalNumber /= 2;
+//         i++;
+//     }
+//     return binaryNumber;
+// }
+ 
+// int main()
+// {
+//     int decimalNumber;
+//     printf("\nInput decimalNumber: ");
+//     scanf("%d", &decimalNumber);
+//     printf("BinaryNumber = %d", Binary_N(decimalNumber));
+// }
+
+
+
+
+
+
+//! Chuyển từ Nhị phân về Thập phân:
+#include<stdio.h>  
+#include<conio.h>  
+#include<math.h>
+
+//! 1001(2) = 9
+int DecimalNumber (int binaryNumber) {
+    int decimalNumber = 0;
+    int i = 0; 
+    while (binaryNumber != 0) {
+        decimalNumber += (binaryNumber % 10) * pow(2, i);
+        binaryNumber /= 10;
         i++;
-        decimalNumber /= 2;
     }
-    return binaryNumber;
+    return decimalNumber;
 }
- 
-int main()
-{
-    int decimalNumber;
-    printf("\nInput decimalNumber: ");
-    scanf("%d", &decimalNumber);
-    printf("BinaryNumber = %d", Dec2Bin(decimalNumber));
+
+int main() {
+    int binaryNumber;
+    printf ("Nhap vao binaryNumer = ");
+    scanf ("%d", &binaryNumber);
+
+    printf ("DecimalNumber: %d", DecimalNumber(binaryNumber));
+    return 0;
 }
+
+
+
+
+
+
+
+
 
 
 ///////
 // Cách 2:
-#include<stdio.h>  
-#include<conio.h>  
+// #include<stdio.h>  
+// #include<conio.h>  
+// int a[10],n,i;
+// void Binary_N (int n, int a[]) {
+//     for(i=0;n>0;i++)  
+//     {  
+//         a[i]=n%2;  
+//         n=n/2;  
+//     }  
+//     printf("Nhi phan cua so vua nhap: ");  
+//     for(i=i-1;i>=0;i--)  
+//     {  
+//         printf("%d",a[i]);  
+//     }  
+// }
 
-int main(){  
-    int a[10],n,i;  
-    printf("Nhap mot so bat ky: ");  
-    scanf("%d",&n);  
-    for(i=0;n>0;i++)  
-    {  
-        a[i]=n%2;  
-        n=n/2;  
-    }  
-    printf("\nDang nhi phan cua so vua nhap la = ");  
-    for(i=i-1;i>=0;i--)  
-    {  
-        printf("%d",a[i]);  
-    }  
-}
+// int main(){  
+//     char TL;
+//     do {
+//         printf("\nNhap mot so bat ky: ");  
+//         scanf("%d",&n);
+//         Binary_N(n, a);
+//         printf ("\nBan co muon tiep tuc(Y, N): ");
+//         fflush(stdin);
+//         TL = getchar();
+//     } while (TL == 'Y' || TL == 'y');
+    
+//     return 0;
+// }
+
+
+
+
