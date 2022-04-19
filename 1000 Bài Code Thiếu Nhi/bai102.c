@@ -1,5 +1,5 @@
 
-// nhập vào ngày tháng năm, in ra ngày kế tiếng ngày đó.
+// nhập vào ngày tháng năm, in ra ngày kế tiếp ngày đó.
 
 #include<stdio.h>
 #include<conio.h>
@@ -34,12 +34,12 @@ void TimNgayKeTiep(int Ngay, int Thang, int Nam)
     {
         Ngay++;
     }
-    else if (Thang < 12)     // Ngày kế tiếp là đầu tháng
+    else if (Thang < 12) // Ngày >= NgayTrongThang //  Ngày kế tiếp là đầu tháng
     {
         Ngay = 1; Thang++;
-    }
-    else                      // Ngày kế là đầu năm mới tức là hiện tai đang là tháng 12
+    }à đầu năm mới tức là hiện tai đang là tháng 12
     {
+    else                      // Ngày kế l
         Ngay = Thang = 1;
         Nam++;
     }

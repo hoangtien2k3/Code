@@ -20,10 +20,6 @@ int sodaonguoc(int n)
     return res;
 }
 
-// cách 2:
-int sodaonguoc(int n) {
-    for (int i=0; i)
-}
 
 // Cách 2:
 // int sodaonguoc(int n)
