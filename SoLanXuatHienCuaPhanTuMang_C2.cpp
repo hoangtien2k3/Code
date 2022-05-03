@@ -19,7 +19,8 @@ int main(){
             cin >> a[i];
         }while(a[i] < 0);
     }
-    for(int i = 0;i < MAX; i++) cnt[i] = 0;
+    for(int i = 0;i < MAX; i++) 
+        cnt[i] = 0;
     for(int i = 0; i < n;i++){
         cnt[a[i]]++;
     }

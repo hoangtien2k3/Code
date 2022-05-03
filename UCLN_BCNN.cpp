@@ -1,6 +1,6 @@
 
-
 #include <stdio.h>
+
 int main() {
     unsigned a, b, gcd, lcm;
     printf( "Nhap cap (a, b): " );
@@ -17,13 +17,22 @@ int main() {
         lcm++;
     }
     printf( "BSCNN (a, b): %u\n", lcm );
-
+    
     return 0;
 }
 
 
+// Cách khác tính UCLN bằng đệ qui
+int UCLN(int a, int b) {
+    if (a == 0) {
+        return b;
+    }
+    return (UCLN(b % a, a));
+}
 
-/////////// 
+
+
+//! /////////////////////////
 // Hoặc tìm UCLN bằng cách này:
 // #include <stdio.h>
 //     int main() {
