@@ -1,6 +1,9 @@
 
 #include <stdio.h>
+#include<math.h>
 
+
+// cách thông thường
 int main() {
     unsigned a, b, gcd, lcm;
     printf( "Nhap cap (a, b): " );
@@ -27,8 +30,25 @@ int UCLN(int a, int b) {
     if (a == 0) {
         return b;
     }
-    return (UCLN(b % a, a));
+    return UCLN(b % a, a);
 }
+
+// cách tìm BCNN bằng đệ quy
+int BCNN(int a, int b) {
+    return a / UCLN(a, b) * b;
+}
+
+int main() {
+    int a, b;
+    scanf("%d%d", &a, &b);
+
+    printf("%d", UCLN(a, b));
+    printf("\n%d", BCNN(a, b));
+
+}
+
+
+
 
 
 

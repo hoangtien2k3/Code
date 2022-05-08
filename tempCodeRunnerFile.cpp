@@ -1,6 +1,19 @@
-    // for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); i+=3){
-    //     for(int j = i; j < i + 3; j++){
-    //         std::cout << arr[j] << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
+int main() {
+    unsigned a, b, gcd, lcm;
+    printf( "Nhap cap (a, b): " );
+    scanf( "%u%u", &a, &b );
+
+    gcd = a;
+    while ( a % gcd || b % gcd ) {
+        gcd--;
+    }
+    printf( "USCLN (a, b): %u\n", gcd );
+
+    lcm = a;
+    while ( lcm % a || lcm % b ) {
+        lcm++;
+    }
+    printf( "BSCNN (a, b): %u\n", lcm );
+    
+    return 0;
+}
