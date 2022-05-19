@@ -17,7 +17,7 @@ int songuyento (int n) {
     for (int i = 2; i < n; i++) {
         if (n % i == 0) { 
             count++; 
-            printf ("\n%d chia het cho %d", n, i);;t
+            printf ("\n%d chia het cho %d", n, i);
         }
     }
     if (count == 0) {

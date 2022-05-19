@@ -21,6 +21,7 @@
 //Cách 2: function without using the library function
 #include<stdio.h>
 #include<string.h>
+
 void reverse_String (char * str) {
     for (int i = 0; i < strlen(str)/2; i++) {
         if (str[i] == '(') {
@@ -30,13 +31,16 @@ void reverse_String (char * str) {
         str[i] = str[strlen(str)-i-1];
         str[strlen(str)-i-1] = temp;
     }
+    
 }
+
 int main() {
     char str[30];
     printf ("Nhap vao str : ");
     gets(str);
     reverse_String (str);
     puts (str);
-    return 0;
+    
 
+    return 0;
 }

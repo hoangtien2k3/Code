@@ -10,18 +10,23 @@
 
 using namespace std;
 
-int UCLN(int a, int b)
-{
-    int r;
-    a = abs(a);
-    b = abs(b);
-    while (b > 0)
-    {
-        r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
+// int UCLN(int a, int b)
+// {
+//     int r;
+//     a = abs(a);
+//     b = abs(b);
+//     while (b > 0)
+//     {
+//         r = a % b;
+//         a = b;
+//         b = r;
+//     }
+//     return a;
+// }
+
+int UCLN(int a, int b) {
+    if (b == 0) return a;
+    return UCLN(a, a % b);
 }
 
 int main()
@@ -35,18 +40,15 @@ int main()
         cout << "INVALID";
     else if (a % b == 0)
         cout << a / b;
-    else
-    {
-        if (a * b < 0 && b < 0)
-        {
+    else {
+        if (a * b < 0 && b < 0) {
             b = b * -1;
             a = a * -1;
         }
-        if (a * b > 0 && a < 0 && b < 0)
-        {
+        if (a * b > 0 && a < 0 && b < 0) {
             a = a * -1;
             b = b * -1;
         }
-        cout << a / UCLN(a, b) << " " << b / UCLN(a, b);
+        cout << a / UCLN(a, b) << "/" << b / UCLN(a, b);
     }
 }
