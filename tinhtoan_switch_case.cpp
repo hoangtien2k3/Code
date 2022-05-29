@@ -42,12 +42,13 @@ int main() {
     cout << "nhap vao a = ";
     cin >> a;
     cout << "nhap vao phep toan (+,-,*,/) : ";
-    cin.ignore();
+    cin.ignore(); // giống với fflush(stdin); trong C
     cin >> x;
     cout << "nhap vao b = ";
     cin >> b;
 
     cout << "Ket qua = ";
     TinhToan (a, x, b);
+    
     return 0;
 }

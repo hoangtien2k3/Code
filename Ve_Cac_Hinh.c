@@ -215,7 +215,7 @@ void Hinh_Thoi (int h) {
     printf ("Hinh_9:\t\n\n");
     for (int i=1; i<=h; i++) {
         for (int j=1; j<=2*h-1; j++) {
-            if (h-i+1 <= j && j <= h+i-1) {
+            if (h-i+1 <= j && h+i-1 >= j) {
                 printf (" * ");
             } else {
                 printf ("   ");

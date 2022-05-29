@@ -33,11 +33,11 @@ TH1: a != 0 => ax^2 + bx + c = 0 => giải pt bậc 2
 //         }
 //         if (b != 0)
 //         {
-//             printf ("x = %.2f",-c / b);
+//             printf ("x = %.2f", -c / b);
 //         }
 //     }
-//     else
-//     { // a != 0
+//     else // a != 0
+//     { 
 //         delta = b * b - 4 * a * c;
 //         if (delta > 0)
 //         {
@@ -47,14 +47,13 @@ TH1: a != 0 => ax^2 + bx + c = 0 => giải pt bậc 2
 //         }
 //         if (delta == 0)
 //         {
-//             printf ("x = x1 = x2 = %.2f", -b / (2 * a));
+//             printf ("x1 = x2 = %.2f", -b / (2 * a));
 //         }
 //         if (delta < 0)
 //         {
 //             printf ("Phuong trinh vo nghiem");
 //         }
 //     }
-
 //     return 0;
 // }
 
@@ -100,6 +99,7 @@ int giaiPT(float a, float b, float c, float &x1, float &x2)
         return 2;
     }
 }
+
 int main()
 {
     float a, b, c;

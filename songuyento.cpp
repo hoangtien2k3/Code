@@ -12,6 +12,7 @@ int songuyento (int n) {
     int count = 0;
     if (n < 2) {
         printf ("\n%d KHONG PHAI LA SO NGUYEN TO ");
+        return 0;
     }
 
     for (int i = 2; i < n; i++) {
@@ -42,12 +43,10 @@ int main()
 
 // bool nguyenTo(int n)
 // {
-//     if (n < 2)
-//         return false;
 //     for (int i = 2; i <= (int)sqrt(n); i++)
 //     {
 //         if (n % i == 0)
 //             return false;
 //     }
-//     return true;
+//     return n > 1;
 // }
