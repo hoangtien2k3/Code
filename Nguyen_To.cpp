@@ -34,27 +34,27 @@ int main() {
 
 
 ///////////////////////////////////
-#include<stdio.h>
-#include<math.h>
+// #include<stdio.h>
+// #include<math.h>
 
-int NguyenTo (int n) {
-    for(int i=2; i<=sqrt(n); i++) {
-        if (n % i == 0) {
-            return 0;
-        }
-    }
-    return n>1;
-}
+// int NguyenTo (int n) {
+//     for(int i=2; i<=sqrt(n); i++) {
+//         if (n % i == 0) {
+//             return 0;
+//         }
+//     }
+//     return n>1;
+// }
 
-int main() {    
-    int n;
-    printf("Nhap vao n = ");
-    scanf("%d", &n);
-    if (NguyenTo(n)) {
-        printf("nguyen to");
-    } else {
-        printf("Ko phai nguyen to");
-    }
+// int main() {    
+//     int n;
+//     printf("Nhap vao n = ");
+//     scanf("%d", &n);
+//     if (NguyenTo(n)) {
+//         printf("nguyen to");
+//     } else {
+//         printf("Ko phai nguyen to");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

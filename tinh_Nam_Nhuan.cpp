@@ -28,6 +28,7 @@ void tinhNamNhuan(int n)
         }
     }
 }
+
 int main()
 {
     int n;

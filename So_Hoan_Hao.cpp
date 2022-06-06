@@ -25,6 +25,7 @@ int SoHoanHao(long n)
     }
     return 0;
 }
+
 int main()
 {
     int n;

@@ -78,6 +78,7 @@ TH1: a != 0 => ax^2 + bx + c = 0 => giải pt bậc 2
 #include <iostream>
 #include <math.h>
 using namespace std;
+
 int giaiPT(float a, float b, float c, float &x1, float &x2)
 {
     float delta = b * b - 4 * a * c;
