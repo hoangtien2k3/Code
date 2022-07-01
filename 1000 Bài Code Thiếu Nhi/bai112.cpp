@@ -55,10 +55,6 @@ void Hinh_Chu_Nhat_Rong(int m, int n) {
     }
 }
 
-
-
-
-
 int main() {
     int m, n;
     printf ("Nhap vao m, n: ");
