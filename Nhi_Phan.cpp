@@ -41,8 +41,27 @@
 //     printf("BinaryNumber = %d", Binary_N(decimalNumber));
 // }
 
+// chuyển thập phân sang nhị phân bằng stack ( stack là vào sau thì lấy ra trước )
+#include<iostream>
+#include<stack>
 
+using namespace std;
 
+int main() {
+    stack<int> st;
+    int n;
+    cin >> n;
+
+    while(n > 0) {
+        st.push(n % 2);
+        n /= 2;
+    }
+
+    while(!st.empty()){
+		cout << st.top();
+		st.pop();
+	}
+}
 
 
 

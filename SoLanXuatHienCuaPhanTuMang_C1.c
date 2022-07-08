@@ -15,7 +15,7 @@ void Count_Element_Array () {
     for (int i=0; i<n; i++) {
         if (brr[i]) {
             count = 1;
-            for (int j=i+1; j<n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (arr[i] == arr[j]) {
                     count++;
                     brr[j] = 0;
@@ -29,11 +29,11 @@ void Count_Element_Array () {
 int main() {
     printf("Nhap vao n = ");
     scanf("%d", &n);
-    for (int i=0; i<n; i++) {
+    for (int i = 0; i < n; i++) {
         printf ("arr[%d] = ", i);
         scanf ("%d", &arr[i]);
     }
-    for (int i=0; i<n; i++) {
+    for (int i = 0; i < n; i++) {
         brr[i] = 1;
     }
     Count_Element_Array();

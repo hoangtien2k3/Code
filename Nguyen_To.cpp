@@ -20,7 +20,7 @@ int main() {
     }
     for (int i=0; i<n; i++)  {
         if (nt(a[i])) {
-            std::cout << a[i] <<" ";
+            std::cout << a[i] << " ";
         }
     }
     return 0;
